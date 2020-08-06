@@ -1,4 +1,4 @@
-import tensorflow as tf
+#import tensorflow as tf
 from tensorflow.keras.layers import SimpleRNN, Embedding, Dense, LSTM
 from tensorflow.keras.layers import Conv1D
 from tensorflow.keras.models import Sequential
@@ -49,7 +49,7 @@ def model_main(x_train, y_train, cnt, epoch, batchsize, x_test, y_test):
     plt.show()
 
 
-def LSTM_RNN(_X, _weights, _biases, n_input, n_steps):
+def LSTM_RNN(_X, _weights, _biases, n_input, n_steps, n_hidden):
     # input shape: (batch_size, n_steps, n_input)
     _X = tf.transpose(_X, [1, 0, 2])
     # Reshape to prepare input to hidden activation
